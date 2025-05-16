@@ -12,5 +12,9 @@ using var context = new AppDbContext(connectionString);
 
 var lstProducts = context.Products.ToList();
 
+foreach (var product in lstProducts)
+{
+    Console.WriteLine($"[{product.Id}] {product.Name} - {product.Price}");
+}
 
 Console.ReadKey();
